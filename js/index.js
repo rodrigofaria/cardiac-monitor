@@ -103,8 +103,8 @@ const loadPatientData = () => {
 
   const items = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
   const patient = items.find(item => item.id == patientId)
-  document.getElementById('patientName').innerHTML = patient.name
-  document.getElementById('fcmax').innerHTML = patient.fcMax
+  document.getElementById('patientName').innerHTML = patient.name.toUpperCase()
+  document.getElementById('fcmax').innerHTML = 'FCMax: ' + patient.fcMax + 'bpm' 
 }
 
 window.onload = start()
