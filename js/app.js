@@ -1,13 +1,12 @@
 let startComunication = document.querySelector('#startComunication')
 
 startComunication.addEventListener('click', function() {
-  //statusText.textContent = 'Breathe...';
+  startComunication.style.display = 'none'
   heartRates = []
   heartRateSensor.connect()
   .then(() => heartRateSensor.startNotificationsHeartRateMeasurement().then(handleHeartRateMeasurement))
   .catch(error => {
-    //statusText.textContent = error;
-    //RODRIGO arrumar aqui
+    alert('Erro de comunicação bluetooth! Por favor, tente novamente!')
   })
 })
 
