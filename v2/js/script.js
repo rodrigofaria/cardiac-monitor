@@ -33,10 +33,10 @@ function heartSpan() {
     return '<span> &#x2764;</span>'
 }
 
-function handleHeartRateMeasurement(heartRateMeasurement) {
+function handleHeartRateMeasurement(heartRateMeasurement, cardId) {
     heartRateMeasurement.addEventListener('characteristicvaluechanged', event => {
       let heartRateMeasurement = heartRateSensor.parseHeartRate(event.target.value)
-      const container = document.querySelector(`#patient1 .patient-info`);
+      const container = document.querySelector(`#patient${cardId} .patient-info`);
       let bpmDiv = container.querySelector('.heart-rate-display .bpm-value')
       if (!bpmDiv) {
         let div = document.createElement('div')
@@ -51,13 +51,13 @@ function handleHeartRateMeasurement(heartRateMeasurement) {
       }
       
       bpmDiv.innerHTML = heartRateMeasurement.heartRate + heartSpan()
-      //document.querySelector('#statusText').innerHTML = heartRateMeasurement.heartRate + heartSpan()
     })
 }
 
 function connectHeartSensor(cardId) {
     heartRateSensor.connect()
-        .then(() => heartRateSensor.startNotificationsHeartRateMeasurement().then(handleHeartRateMeasurement))
+        .then(() => heartRateSensor.startNotificationsHeartRateMeasurement()
+            .then(event => handleHeartRateMeasurement(event, cardId)))
         .catch(error => {
             alert('Erro de comunicação bluetooth! Por favor, tente novamente!')
         })
@@ -71,7 +71,7 @@ document.querySelectorAll(".patient-selector").forEach(select => {
         const card = e.target.dataset.card;
         if (index !== "") {
             displayPatientData(card, index);
-            connectHeartSensor()
+            connectHeartSensor(card)
         } else {
             document.querySelector(`#patient${card} .patient-info`).innerHTML = "";
         }
