@@ -108,3 +108,25 @@ document.getElementById("newPatientForm").addEventListener("submit", (e) => {
 
 // Inicialização
 updatePatientSelectors();
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const expandBtn = document.getElementById('expandPatient2');
+    const patient2 = document.getElementById('patient2');
+    const info2 = document.getElementsByClassName('internal')[0];
+  
+    expandBtn.addEventListener('click', function() {
+      if (patient2.classList.contains('minimized')) {
+        // Expandir
+        patient2.classList.remove('minimized');
+        info2.style.display = 'flex';
+        expandBtn.textContent = '-';
+      } else {
+        // Minimizar
+        patient2.classList.add('minimized');
+        info2.style.display = 'none';
+        expandBtn.textContent = '+';
+      }
+    });
+  });
+  

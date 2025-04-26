@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Monitor de Pacientes</title>
-  <link rel="stylesheet" href="css/style1.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
@@ -16,9 +16,12 @@
     </div>
 
     <div id="patient2" class="patient-card minimized">
-      <h2>Paciente 2</h2>
-      <select class="patient-selector" data-card="2"></select>
-      <div class="patient-info"></div>
+      <button class="expand-btn" id="expandPatient2">+</button>
+      <div class="internal" style="display: none;">
+        <h2>Paciente 2</h2>
+        <select class="patient-selector" data-card="2"></select>
+        <div class="patient-info"></div>
+      </div>
     </div>
   </div>
 
