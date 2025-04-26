@@ -58,7 +58,7 @@ body {
 }
 
 .patient-card p {
-  font-size: 20px;
+  font-size: 25px;
   margin: 8px 0;
 }
 
@@ -123,6 +123,10 @@ body {
   border: none;
   cursor: pointer;
   color: #666;
+}
+
+.patient-selector {
+  font-size: 25px;
 }
 
 /* Estilo do formulário dentro da sidebar */
