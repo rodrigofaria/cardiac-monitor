@@ -63,7 +63,8 @@ body {
 }
 
 .patient-card span {
-  color: #111;
+  color: #ff0000;
+  font-size: 0.7em;
 }
 
 /* Botão flutuante */
@@ -178,9 +179,9 @@ body {
 }
 
 .bpm-value {
-  font-size: 10em;
+  font-size: 12em;
   font-weight: bold;
-  color: #fff;
+  color: #942b2b;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
