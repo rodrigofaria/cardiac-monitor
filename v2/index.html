@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Monitor de Pacientes</title>
+  <link rel="stylesheet" href="css/style1.css" />
+</head>
+<body>
+
+  <div class="container">
+    <div id="patient1" class="patient-card">
+      <h2>Paciente 1</h2>
+      <select class="patient-selector" data-card="1"></select>
+      <div class="patient-info"></div>
+    </div>
+
+    <div id="patient2" class="patient-card minimized">
+      <h2>Paciente 2</h2>
+      <select class="patient-selector" data-card="2"></select>
+      <div class="patient-info"></div>
+    </div>
+  </div>
+
+  <!-- Botão flutuante -->
+  <button id="openSidebar" class="floating-btn">+ Adicionar Paciente</button>
+
+  <!-- Painel lateral -->
+  <div id="sidebarForm" class="sidebar">
+    <div class="sidebar-header">
+      <h2>Novo Paciente</h2>
+      <button id="closeSidebar" class="close-btn">×</button>
+    </div>
+    <form id="newPatientForm">
+      <label>
+        Nome:
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        Idade:
+        <input type="number" name="age" required />
+      </label>
+      <label>
+        Sexo:
+        <select name="sex" required>
+          <option value="">Selecione</option>
+          <option>Masculino</option>
+          <option>Feminino</option>
+        </select>
+      </label>
+      <button type="submit">Salvar paciente</button>
+    </form>
+  </div>
+
+  <script src="js/script.js"></script>
+  <script src="js/heartRateSensor.js"></script>
+</body>
+</html>
