@@ -16,6 +16,7 @@ function updatePatientSelectors() {
 function displayPatientData(cardId, patientIndex) {
     const patient = JSON.parse(localStorage.getItem("patients"))[patientIndex];
     const container = document.querySelector(`#patient${cardId} .patient-info`);
+    const patientTitle = document.querySelector(`#patient${cardId} h2`);
 
     const freqMax = 220 - patient.age;
     const rangeMin = Math.round(freqMax * 0.55);
@@ -27,6 +28,7 @@ function displayPatientData(cardId, patientIndex) {
       <p><strong>Range ideal:</strong> ${rangeMin} - ${rangeMax} bpm</p>
       <p><strong>Frequência Atual:</strong> </p>
     `;
+    patientTitle.innerHTML = patient.name;
 }
 
 function heartSpan() {
