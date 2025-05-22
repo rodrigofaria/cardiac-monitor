@@ -8,8 +8,22 @@
 /* Layout principal */
 body {
   font-family: Arial, sans-serif;
-  background-color: #f2f2f2;
   padding: 20px;
+}
+
+.logo-watermark {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  opacity: 0.05;
+  pointer-events: none;
+}
+
+.logo-watermark img {
+  max-width: 50vw;
+  height: auto;
 }
 
 .container {
@@ -22,6 +36,10 @@ body {
 
 .patient-card {
   background-color: white;
+  sdbackground-image: url('../images/logo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
@@ -51,10 +69,11 @@ body {
 }
 
 .patient-card h2 {
-  color: #0077cc;
+  color: #4D3722;
   margin-bottom: 15px;
-  font-size: 40px;
+  font-size: 50px;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .patient-card p {
@@ -73,7 +92,7 @@ body {
   bottom: 30px;
   right: 30px;
   padding: 14px 20px;
-  background-color: #007bff;
+  background-color: #4D3722;
   color: white;
   font-size: 16px;
   border: none;
@@ -84,7 +103,7 @@ body {
 }
 
 .floating-btn:hover {
-  background-color: #0056b3;
+  background-color: #4D3722;
 }
 
 /* Painel lateral */
@@ -151,7 +170,7 @@ body {
 #newPatientForm button {
   width: 100%;
   padding: 12px;
-  background-color: #007bff;
+  background-color: #4D3722;
   color: white;
   border: none;
   border-radius: 8px;
@@ -162,12 +181,11 @@ body {
 }
 
 #newPatientForm button:hover {
-  background-color: #0056b3;
+  background-color: #4D3722;
 }
 
 .heart-rate-display {
-  margin-top: 20px;
-  padding: 20px;
+  margin-top: -10px;
   text-align: center;
   color: rgb(133, 20, 20);
 }
@@ -179,7 +197,7 @@ body {
 }
 
 .bpm-value {
-  font-size: 12em;
+  font-size: 16em;
   font-weight: bold;
   color: #942b2b;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
@@ -196,7 +214,7 @@ body {
 
 /* Botão de expandir/minimizar */
 .expand-btn {
-  background-color: #007bff;
+  background-color: #4D3722;
   color: white;
   border: none;
   border-radius: 50%;

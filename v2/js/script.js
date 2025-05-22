@@ -23,10 +23,9 @@ function displayPatientData(cardId, patientIndex) {
     const rangeMax = Math.round(freqMax * 0.85);
 
     container.innerHTML = `
-      <p><strong>Nome:</strong> ${patient.name}</p>
-      <p><strong>Frequência Máxima:</strong> ${freqMax} bpm</p>
-      <p><strong>Range ideal:</strong> ${rangeMin} - ${rangeMax} bpm</p>
-      <p><strong>Frequência Atual:</strong> </p>
+      <p><strong>FC Max:</strong> ${freqMax} bpm</p>
+      <p><strong>FC Alvo:</strong> ${rangeMin} - ${rangeMax} bpm</p>
+      <p><strong>FC Cardíaca:</strong> </p>
     `;
     patientTitle.innerHTML = patient.name;
 }
