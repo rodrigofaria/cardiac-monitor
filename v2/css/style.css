@@ -35,10 +35,10 @@ body {
 
 .patient-card {
   background-color: white;
-  sdbackground-image: url('../images/logo.png');
+  /*sdbackground-image: url('../images/logo.png');
   background-repeat: no-repeat;
   background-size: contain;
-  background-position: center;
+  background-position: center;*/
   padding: 20px;
   border-radius: 16px;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
@@ -68,15 +68,22 @@ body {
 }
 
 .patient-card h2 {
-  color: #4D3722;
   margin-bottom: 15px;
   font-size: 50px;
   text-align: center;
   text-transform: uppercase;
 }
 
+#patient1 h2 {
+  background-color: #f17f3c;
+}
+
+#patient2 h2 {
+  background-color: #44e6cd;
+}
+
 .patient-card p {
-  font-size: 25px;
+  font-size: 35px;
   margin: 8px 0;
 }
 
@@ -200,6 +207,7 @@ body {
   font-weight: bold;
   color: #942b2b;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 
 /* Card minimizado */
